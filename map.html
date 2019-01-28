@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>MTB Map</title>
+    <style>
+      #map {
+        height: 100%;
+      }
+      #legend {
+        font-family: Arial, sans-serif;
+        background: #fff;
+        padding: 10px;
+        margin: 10px;
+        border: 3px solid #000;
+      }
+      #legend h3 {
+        margin-top: 0;
+      }
+      #legend img {
+        vertical-align: middle;
+      }
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <!-- <div id="legend"><h3>Legend</h3></div> -->
+    <script src="data.js?v=1"></script>
+    <script src="map.js?v=1"></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD14gTlNOwQ9qJLlng3-ivUIXX1E5YaVeE&callback=initMap">
+    </script>
+  </body>
+</html>
+
