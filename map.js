@@ -35,7 +35,7 @@ function countFeatures() {
 	map.data.forEach(function (feature) {
 	    map.data.remove(feature);
 	});
-	alert("Too detailed area - we've limited the data - please zoom in");
+	//alert("Too detailed area - we've limited the data - please zoom in");
     }
     console.log("features: " + count);
 }
