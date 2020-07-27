@@ -91,11 +91,11 @@ function initMap() {
     });
     map.data.addListener('click', function(event) {
 	const url = "https://boligejer.dk/ejendomsdata/0/10/0/" + 
-	      event.feature.h.esrejendomsnr +
+	      event.feature.j.esrejendomsnr +
 	      "%7C" + 
-	      event.feature.h.udvidet_esrejendomsnr.substring(0, 3).padStart(4, '0');
+	      event.feature.j.udvidet_esrejendomsnr.substring(0, 3).padStart(4, '0');
 
-	infowindow.setContent("<a href='" + url + "' target='_blank'>link</a> - " + event.feature.h.udvidet_esrejendomsnr); // show the html variable in the infowindow
+	infowindow.setContent("<a href='" + url + "' target='_blank'>link</a> - " + event.feature.j.udvidet_esrejendomsnr); // show the html variable in the infowindow
 	infowindow.setPosition(event.latLng);
 	infowindow.setOptions({
 	    pixelOffset: new google.maps.Size(0, 0)
