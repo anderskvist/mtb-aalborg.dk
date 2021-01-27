@@ -58,7 +58,9 @@ function initMap() {
     map.data.setStyle(function(feature) {
 	var ejendomsnummer = feature.getProperty('esrejendomsnr');
 	var udvidet_esrejendomsnr = feature.getProperty('udvidet_esrejendomsnr');
-	if (stat.includes(parseInt(ejendomsnummer,10))) {
+	if (udvidet_esrejendomsnr == null) {
+        color = 'purple';
+	} else if (stat.includes(parseInt(ejendomsnummer,10))) {
 	    color = 'red';
 	} else if (stat.includes(parseInt(udvidet_esrejendomsnr,10))) {
 	    color = 'red';
