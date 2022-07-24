@@ -92,10 +92,8 @@ function initMap() {
 	content: "hello"
     });
     map.data.addListener('click', function(event) {
-	const url = "https://boligejer.dk/ejendomsdata/0/10/0/" + 
-	      event.feature.j.esrejendomsnr +
-	      "%7C" + 
-	      event.feature.j.udvidet_esrejendomsnr.substring(0, 3).padStart(4, '0');
+
+        const url = "https://boligejer.dk/ejendomsdata?knr=" + event.feature.j.udvidet_esrejendomsnr.substring(0, 3).padStart(4, '0') + "&enr=" + event.feature.j.esrejendomsnr;
 
 	infowindow.setContent("<a href='" + url + "' target='_blank'>link</a> - " + event.feature.j.udvidet_esrejendomsnr); // show the html variable in the infowindow
 	infowindow.setPosition(event.latLng);
