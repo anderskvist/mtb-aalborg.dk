@@ -97,6 +97,8 @@ function initMap() {
             console.log(event.feature);
         }
 
+        console.log(event.feature);
+
         const url = "https://boligejer.dk/ejendomsdata?knr=" + event.feature.h.udvidet_esrejendomsnr.substring(0, 3).padStart(4, '0') + "&enr=" + event.feature.h.esrejendomsnr;
 
 	infowindow.setContent("<a href='" + url + "' target='_blank'>link</a> - " + event.feature.h.udvidet_esrejendomsnr); // show the html variable in the infowindow
