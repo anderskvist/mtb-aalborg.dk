@@ -93,15 +93,15 @@ function initMap() {
     });
     map.data.addListener('click', function(event) {
 
-        if (!event.feature.hasOwnProperty('h')) {
+        if (!event.feature.hasOwnProperty('j')) {
             console.log(event.feature);
         }
 
-        console.log(event.feature);
+        //console.log(event.feature);
 
-        const url = "https://boligejer.dk/ejendomsdata?knr=" + event.feature.h.udvidet_esrejendomsnr.substring(0, 3).padStart(4, '0') + "&enr=" + event.feature.h.esrejendomsnr;
+        const url = "https://boligejer.dk/ejendomsdata?knr=" + event.feature.j.udvidet_esrejendomsnr.substring(0, 3).padStart(4, '0') + "&enr=" + event.feature.j.esrejendomsnr;
 
-	infowindow.setContent("<a href='" + url + "' target='_blank'>link</a> - " + event.feature.h.udvidet_esrejendomsnr); // show the html variable in the infowindow
+	infowindow.setContent("<a href='" + url + "' target='_blank'>link</a> - " + event.feature.judvidet_esrejendomsnr); // show the html variable in the infowindow
 	infowindow.setPosition(event.latLng);
 	infowindow.setOptions({
 	    pixelOffset: new google.maps.Size(0, 0)
