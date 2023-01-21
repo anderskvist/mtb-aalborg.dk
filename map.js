@@ -97,11 +97,13 @@ function initMap() {
             console.log(event.feature);
         }
 
-        //console.log(event.feature);
+		//console.log(event.feature);
+		data = event.feature.j;
+		console.log(data);
 
-        const url = "https://boligejer.dk/ejendomsdata?knr=" + event.feature.j.udvidet_esrejendomsnr.substring(0, 3).padStart(4, '0') + "&enr=" + event.feature.j.esrejendomsnr;
+        const url = "https://boligejer.dk/ejendomsdata?knr=" + data.udvidet_esrejendomsnr.substring(0, 3).padStart(4, '0') + "&enr=" + data.esrejendomsnr;
 
-	infowindow.setContent("<a href='" + url + "' target='_blank'>link</a> - " + event.feature.judvidet_esrejendomsnr); // show the html variable in the infowindow
+	infowindow.setContent("<a href='" + url + "' target='_blank'>link</a> - " + data.udvidet_esrejendomsnr); // show the html variable in the infowindow
 	infowindow.setPosition(event.latLng);
 	infowindow.setOptions({
 	    pixelOffset: new google.maps.Size(0, 0)
